@@ -32,30 +32,31 @@ user_choiceint = int(user_choice)
 
 gamer = [rock, paper, scissors]
 
-print(f"\nYou choose {gamer[user_choiceint]}")
-
 computer = random.choice(gamer)
+if user_choiceint >= 3 or user_choiceint <0:
+  print("You typed an invalid number. Try again.")
+else:
+  print(f"\nYou choose {gamer[user_choiceint]}")
+  print(f"The computer choose {computer}")
 
-print(f"The computer choose {computer}")
+  if user_choiceint == 0 and computer == gamer[0]:
+      print("You draw")
+  elif user_choiceint == 0 and computer == gamer[1]:
+      print("You lose")
+  elif user_choiceint == 0 and computer == gamer[2]:
+      print("You win")
 
-if user_choiceint == 0 and computer == gamer[0]:
-  print("You draw")
-elif user_choiceint == 0 and computer == gamer[1]:
-  print("You lose")
-elif user_choiceint == 0 and computer == gamer[2]:
-  print("You win")
-
-if user_choiceint == 1 and computer == gamer[1]:
-  print("You draw")
-elif user_choiceint == 1 and computer == gamer[2]:
-  print("You lose")
-elif user_choiceint == 1 and computer == gamer[0]:
-  print("You win")
+  if user_choiceint == 1 and computer == gamer[1]:
+      print("You draw")
+  elif user_choiceint == 1 and computer == gamer[2]:
+      print("You lose")
+  elif user_choiceint == 1 and computer == gamer[0]:
+      print("You win")
 
 
-if user_choiceint == 2 and computer == gamer[2]:
-  print("You draw")
-elif user_choiceint == 2 and computer == gamer[0]:
-  print("You lose")
-elif user_choiceint == 2 and computer == gamer[1]:
-  print("You win")
+  if user_choiceint == 2 and computer == gamer[2]:
+      print("You draw")
+  elif user_choiceint == 2 and computer == gamer[0]:
+      print("You lose")
+  elif user_choiceint == 2 and computer == gamer[1]:
+      print("You win")
